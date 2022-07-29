@@ -1,0 +1,20 @@
+{
+  "s3_root_url": "https://restrafes.s3.amazonaws.com",
+  "adminGuilds": [
+    328619992839094273
+  ],
+  "admins": [191559866416889856, 662415405985431552],
+  "embedDefault": {
+    "footer": {
+      "text": "made with \u2665 by eve",
+      "icon_url": "https://i.imgur.com/Yw0tnOf.png"
+    }
+  },
+  "commandDefault": {
+    "guild_ids": [
+      328619992839094273,
+      622857239807524884,
+      621857139014500374
+    ]
+  }
+}

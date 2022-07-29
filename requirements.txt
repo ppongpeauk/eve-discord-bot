@@ -1,0 +1,7 @@
+discord.py
+discord-py-slash-command
+python-dotenv
+ffmpeg-python
+ffprobe-python
+filetype
+spotipy
