@@ -8,7 +8,7 @@ temp_path = "temp"
 
 async def random_string():
   string = ""
-  for x in range(24):
+  for _ in range(24):
     string += random.choice(string.ascii_lowercase + string.ascii_uppercase + string.digits) # merge arrays
   return string
 
@@ -16,7 +16,6 @@ async def main(**kwargs):
   # check if filetype is valid
   get_ft = filetype.guess(kwargs.get("url"))
   if get_ft.extension.startswith("video/"):
-
     file_name = os.path.basename(urlparse(kwargs.get("url")).path)
     name_base = os.path.splitext(file_name)
     file_request = requests.get(kwargs.get("url"), allow_redirects=True)

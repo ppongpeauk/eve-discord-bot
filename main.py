@@ -1,9 +1,3 @@
-'''
-    Filename: main.py
-    Author: @restrafes, @evestrafes
-    Date Created: 4/5/2021
-    Python Version: 3.7.9
-'''
 # import dependencies
 import os, discord, json, asyncio
 from dotenv import load_dotenv
@@ -18,7 +12,7 @@ from commands.info import Info
 from commands.moderation import Moderation
 from commands.bot_owner import BotOwner
 # import includes
-from includes import spotify_activity
+
 # load secrets
 load_dotenv()
 # import settings
@@ -48,7 +42,7 @@ class EveActivity:
 async def on_ready():
     print("ready! (:")
     globals.activity_object = EveActivity()
-    activity = discord.Activity(type=discord.ActivityType.listening, name="something")
+    activity = discord.Activity(type=discord.ActivityType.listening, name="cbat")
     globals.activity_object.set_cache(activity)
     await bot.change_presence(activity=activity)
     try:
@@ -62,10 +56,15 @@ bot.load_extension("commands.info")
 bot.load_extension("commands.moderation")
 bot.load_extension("commands.bot_owner")
 # start bot
-asyncio.new_event_loop()
-loop = asyncio.get_event_loop()
+#asyncio.new_event_loop()
+#loop = asyncio.get_event_loop()
 
-asyncio.ensure_future(bot.start(os.getenv("TOKEN")))
 #loop.create_task(spotify_activity.check_activity(bot))
 
-loop.run_forever()
+#loop.run_forever()
+
+if __name__ == "__main__":
+    try:
+        asyncio.get_event_loop().run_until_complete(bot.start(os.getenv("TOKEN")))
+    except KeyboardInterrupt:
+        pass

@@ -1,9 +1,3 @@
-'''
-    Filename: moderation.py
-    Author: @restrafes, @evestrafes
-    Date Created: 4/5/2021
-    Python Version: 3.7.9
-'''
 # import main dependencies
 import discord, json, time, asyncio
 from discord.ext import commands
